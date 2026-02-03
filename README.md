@@ -31,7 +31,7 @@ run on LambdaTest using the env-based approach.
 4. Reload MCP servers
    - Restart your agent or reload MCP servers so it picks up the new config.
 
-## MCP config (env-based, no manual encoding)
+## MCP config 
 
 `server.js` will build the endpoint and URL-encode the capabilities if you set
 the LambdaTest env vars. This avoids double-encoding mistakes.
