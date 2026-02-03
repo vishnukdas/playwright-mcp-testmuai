@@ -59,7 +59,7 @@ the TestMu AI env vars. This avoids double-encoding mistakes.
 ## What changed vs the default Playwright MCP server
 
 The default server connects to a local Playwright browser. The custom
-`server.js` adds LambdaTest support by:
+`server.js` adds TestMu AI support by:
 
 - Building the CDP endpoint from env vars (`LT_USERNAME`, `LT_ACCESS_KEY`,
   `LT_BROWSER_NAME`, `LT_BROWSER_VERSION`, `LT_PLATFORM`, `LT_BUILD`,
