@@ -1,0 +1,12 @@
+{
+  "name": "playwright-mcp-custom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@playwright/mcp": "^0.0.45"
+  }
+}
