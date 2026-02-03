@@ -1,9 +1,9 @@
-# LambdaTest MCP setup guide
+# TestMu AI MCP setup guide
 
 This guide captures the exact steps and changes used to run the custom Playwright
-MCP server on LambdaTest via a CDP endpoint.
+MCP server on TestMu AI via a CDP endpoint.
 
-## Step-by-step: run MCP on LambdaTest
+## Step-by-step: run MCP on TestMu AI
 
 1. Create or update your MCP config file (`mcp.json`).
 2. Configure env vars so `server.js` can build and encode the CDP endpoint.
@@ -14,7 +14,7 @@ MCP server on LambdaTest via a CDP endpoint.
 ## Step-by-step changes from the Playwright MCP server
 
 Use this when starting from the stock Playwright MCP server and you want to
-run on LambdaTest using the env-based approach.
+run on TestMu AI using the env-based approach.
 
 1. Copy the custom server file
    - Place `server.js` in a stable local path you control
@@ -23,7 +23,7 @@ run on LambdaTest using the env-based approach.
    - In your `mcp.json`, set:
      - `"command": "node"`
      - `"args": ["/path/to/playwright-mcp-custom/server.js"]`
-3. Add LambdaTest env vars
+3. Add TestMu AI env vars
    - In the same `mcp.json` entry, add:
      - `LT_USERNAME`, `LT_ACCESS_KEY`
      - `LT_BROWSER_NAME`, `LT_BROWSER_VERSION`
@@ -34,7 +34,7 @@ run on LambdaTest using the env-based approach.
 ## MCP config 
 
 `server.js` will build the endpoint and URL-encode the capabilities if you set
-the LambdaTest env vars. This avoids double-encoding mistakes.
+the TestMu AI env vars. This avoids double-encoding mistakes.
 
 ```json
 {
@@ -65,10 +65,10 @@ The default server connects to a local Playwright browser. The custom
   `LT_BROWSER_NAME`, `LT_BROWSER_VERSION`, `LT_PLATFORM`, `LT_BUILD`,
   `LT_TEST_NAME`) and URL-encoding the capabilities payload.
 - Connecting via `chromium.connect({ wsEndpoint: cdpEndpoint })`.
-- Closing the browser when the context closes, ensuring the LambdaTest
+- Closing the browser when the context closes, ensuring the TestMu AI
   session ends.
 
-## Optional LambdaTest flags
+## Optional TestMu AI flags
 
 You can toggle these with env vars:
 
